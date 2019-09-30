@@ -1,17 +1,21 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "SGH_GameObjectManager.h"
 
 class SGH_Runtime
 {
 private :
-	//ref GameObjectManager
-	sf::RenderWindow window;
+	SGH_GameObjectManager* gameManager;
+	sf::RenderWindow renderWindow;
+	void Run();
 public:
 	SGH_Runtime();
-	SGH_Runtime(const SGH_Runtime& _ref);
-	SGH_Runtime(sf::RenderWindow& _w);
+	
 	~SGH_Runtime();
 
+	void Render(sf::RenderWindow& _w);
+	void Event(sf::RenderWindow& _w);
+	
 private:
 
 };
