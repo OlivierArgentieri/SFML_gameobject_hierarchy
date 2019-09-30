@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGH_GameObject.cpp" />
+    <ClCompile Include="SGH_GameObjectManager.cpp" />
     <ClCompile Include="SGH_Runtime.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,7 @@ private:
 public:
 	SGH_GameObject(const SGH_GameObject& _ref);
 	SGH_GameObject(sf::Transformable& _refTransform);
-
+	~SGH_GameObject();
 	virtual void Update();
 
 	sf::Vector2f GetPosition();

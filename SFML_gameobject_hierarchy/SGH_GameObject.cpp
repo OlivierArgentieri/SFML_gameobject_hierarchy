@@ -15,8 +15,14 @@ SGH_GameObject::SGH_GameObject(sf::Transformable& _refTransform)
 	transform = &_refTransform;
 }
 
+SGH_GameObject::~SGH_GameObject()
+{
+	delete transform;
+}
+
 void SGH_GameObject::Update()
 {
+	// todo throw new exception 
 }
 
 sf::Vector2f SGH_GameObject::GetPosition()
