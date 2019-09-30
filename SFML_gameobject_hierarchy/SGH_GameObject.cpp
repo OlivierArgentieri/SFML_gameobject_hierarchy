@@ -1,4 +1,5 @@
 #include "SGH_GameObject.h"
+#include <SFML/Graphics/RenderWindow.hpp>
 
 SGH_GameObject::SGH_GameObject()
 {
@@ -20,10 +21,11 @@ SGH_GameObject::~SGH_GameObject()
 	delete transform;
 }
 
-void SGH_GameObject::Update()
+void SGH_GameObject::Update(sf::RenderWindow& _w)
 {
 	// todo throw new exception 
 }
+
 
 sf::Vector2f SGH_GameObject::GetPosition()
 {

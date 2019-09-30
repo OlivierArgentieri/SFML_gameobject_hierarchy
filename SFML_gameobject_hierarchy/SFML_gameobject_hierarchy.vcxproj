@@ -135,11 +135,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGH_GameObject.cpp" />
     <ClCompile Include="SGH_GameObjectManager.cpp" />
+    <ClCompile Include="SGH_Rect.cpp" />
     <ClCompile Include="SGH_Runtime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_GameObject.h" />
     <ClInclude Include="SGH_GameObjectManager.h" />
+    <ClInclude Include="SGH_Rect.h" />
     <ClInclude Include="SGH_Runtime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

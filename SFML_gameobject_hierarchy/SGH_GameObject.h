@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics/Transformable.hpp>
+#include <SFML/Graphics.hpp>
 
 class SGH_GameObject
 {
@@ -11,7 +12,7 @@ public:
 	SGH_GameObject(const SGH_GameObject& _ref);
 	SGH_GameObject(sf::Transformable& _refTransform);
 	~SGH_GameObject();
-	virtual void Update();
+	virtual void Update(sf::RenderWindow& _w);
 
 	sf::Vector2f GetPosition();
 	void SetPosition(sf::Vector2f _newPosition);
