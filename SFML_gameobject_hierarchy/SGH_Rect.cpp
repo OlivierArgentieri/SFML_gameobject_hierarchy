@@ -1,15 +1,17 @@
 #include "SGH_Rect.h"
 #include "SGH_GameObjectManager.h"
 
-SGH_Rect::SGH_Rect() : SGH_GameObject()
+
+SGH_Rect::SGH_Rect(sf::Vector2f _size)
 {
-	rectangle = new sf::RectangleShape(sf::Vector2f(100,100));
-	this->transform = rectangle;
+	rectangle = new sf::RectangleShape(_size);
+	transform = rectangle;
 }
 
-SGH_Rect::SGH_Rect(const SGH_Rect& _ref) : SGH_GameObject(*this)
+SGH_Rect::SGH_Rect(const SGH_Rect& _ref)
 {
 	rectangle = _ref.rectangle;
+	transform = _ref.transform;
 }
 
 SGH_Rect::~SGH_Rect()

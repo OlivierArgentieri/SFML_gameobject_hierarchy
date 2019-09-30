@@ -17,10 +17,15 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(800, 400), "window", sf:
 	gameManager = new SGH_GameObjectManager();
 
 	auto test = new SGH_Rect();
+	auto test2 = new SGH_Rect();
+	auto test3 = new SGH_Rect();
 	test->CenterPivot();
-	
+	test2->CenterPivot();
 	test->SetPosition(sf::Vector2f(400, 200));
+	test2->SetPosition(sf::Vector2f(400, 400));
 	gameManager->AddGameObject(test);
+	gameManager->AddGameObject(test2);
+	gameManager->AddGameObject(test3);
 	//gameManager->AddGameObject(new SGH_Circle());
 	Run(renderWindow);
 }
