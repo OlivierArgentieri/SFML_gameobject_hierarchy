@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+SFML_gameobject_hierarchy/.vs/*
+
+*.cd
+*.ipch
+*.opendb
+*.log
+*.tlog
+*.idk
+*.pdb
+*.ilk
+SFML_gameobject_hierarchy/Debug/*
