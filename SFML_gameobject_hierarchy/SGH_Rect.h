@@ -10,4 +10,5 @@ public:
 	SGH_Rect(const SGH_Rect& _ref);
 	~SGH_Rect();
 	void Update(sf::RenderWindow& _w) override;
+	void CenterPivot() override;
 };

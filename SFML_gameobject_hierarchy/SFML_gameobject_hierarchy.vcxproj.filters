@@ -45,6 +45,9 @@
     <ClCompile Include="SGH_Rect.cpp">
       <Filter>Source Files\Forms</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_Circle.cpp">
+      <Filter>Source Files\Forms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files\Manager</Filter>
     </ClInclude>
     <ClInclude Include="SGH_Rect.h">
+      <Filter>Header Files\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Circle.h">
       <Filter>Header Files\Forms</Filter>
     </ClInclude>
   </ItemGroup>

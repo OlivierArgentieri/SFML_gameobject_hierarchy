@@ -1,5 +1,6 @@
 #include "SGH_Runtime.h"
 #include "SGH_Rect.h"
+#include "SGH_Circle.h"
 
 
 void SGH_Runtime::Run(sf::RenderWindow& _w)
@@ -14,7 +15,13 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(800, 400), "window", sf::Style::Close)
 {
 	gameManager = new SGH_GameObjectManager();
-	gameManager->AddGameObject(new SGH_Rect());
+
+	auto test = new SGH_Rect();
+	test->CenterPivot();
+	
+	test->SetPosition(sf::Vector2f(400, 200));
+	gameManager->AddGameObject(test);
+	//gameManager->AddGameObject(new SGH_Circle());
 	Run(renderWindow);
 }
 

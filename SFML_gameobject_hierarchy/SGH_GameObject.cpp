@@ -6,16 +6,6 @@ SGH_GameObject::SGH_GameObject()
 	transform = nullptr;
 }
 
-SGH_GameObject::SGH_GameObject(const SGH_GameObject& _ref)
-{
-	transform = _ref.transform;
-}
-
-SGH_GameObject::SGH_GameObject(sf::Transformable& _refTransform)
-{
-	transform = &_refTransform;
-}
-
 SGH_GameObject::~SGH_GameObject()
 {
 	delete transform;
@@ -30,6 +20,11 @@ void SGH_GameObject::Update(sf::RenderWindow& _w)
 sf::Vector2f SGH_GameObject::GetPosition()
 {
 	return transform->getPosition();
+}
+
+void SGH_GameObject::SetPosition(float _width, float _height)
+{
+	SetPosition(sf::Vector2f(_width, _height));
 }
 
 void SGH_GameObject::SetPosition(sf::Vector2f _newPosition)
@@ -65,4 +60,9 @@ sf::Vector2f SGH_GameObject::GetOrigin()
 void SGH_GameObject::SetOrigin(sf::Vector2f _newOrigin)
 {
 	transform->setOrigin(_newOrigin);
+}
+
+void SGH_GameObject::CenterPivot()
+{
+	// todo throw ..
 }

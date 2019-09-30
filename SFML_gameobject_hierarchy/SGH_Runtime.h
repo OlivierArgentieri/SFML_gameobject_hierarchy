@@ -1,5 +1,4 @@
 #pragma once
-//#include <SFML/Graphics.hpp>
 #include "SGH_GameObjectManager.h"
 
 class SGH_Runtime

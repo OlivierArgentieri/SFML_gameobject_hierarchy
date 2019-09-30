@@ -10,6 +10,7 @@ private:
 	void Clear();
 
 public:
+	~SGH_GameObjectManager();
 	void AddGameObject(SGH_GameObject* _go);
 	void RemoveGameObject();
 	void UpdateAll(sf::RenderWindow& _w);

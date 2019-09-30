@@ -5,16 +5,19 @@
 class SGH_GameObject
 {
 private:
-	sf::Transformable* transform;
-	SGH_GameObject();
+	sf::Event gameEvent;
 
+protected:
+	sf::Transformable* transform;
+
+	
 public:
-	SGH_GameObject(const SGH_GameObject& _ref);
-	SGH_GameObject(sf::Transformable& _refTransform);
+	SGH_GameObject();
 	~SGH_GameObject();
 	virtual void Update(sf::RenderWindow& _w);
 
 	sf::Vector2f GetPosition();
+	void SetPosition(float _width, float _height);
 	void SetPosition(sf::Vector2f _newPosition);
 
 	float GetRotation();
@@ -25,4 +28,6 @@ public:
 
 	sf::Vector2f GetOrigin();
 	void SetOrigin(sf::Vector2f _newOrigin);
+
+	virtual void CenterPivot();
 };
