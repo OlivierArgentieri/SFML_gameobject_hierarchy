@@ -14,11 +14,11 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 	}
 }
 
-SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(800, 400), "window", sf::Style::Close)
+SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf::Style::Close)
 {
 	gameManager = new SGH_GameObjectManager();
-	SGH_Slider* slider = new SGH_Slider(new SGH_Rect());
-	slider->SetPosition(sf::Vector2f(400, 200));
+	SGH_Slider* slider = new SGH_Slider(new SGH_Rect(100, 10));
+	slider->SetPosition(renderWindow);
 	gameManager->AddGameObject(slider);
 	Run(renderWindow);
 }
