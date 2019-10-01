@@ -18,7 +18,7 @@ public:
 	SGH_GameObject();
 	~SGH_GameObject();
 	virtual void Update(sf::RenderWindow& _w);
-	virtual void ApplyBehaviour();
+	virtual void ApplyBehaviour(sf::RenderWindow& _w);
 
 	sf::Vector2f GetPosition();
 	void SetPosition(float _width, float _height);

@@ -17,7 +17,7 @@ void SGH_GameObject::Update(sf::RenderWindow& _w)
 	// todo throw new exception 
 }
 
-void SGH_GameObject::ApplyBehaviour() 
+void SGH_GameObject::ApplyBehaviour(sf::RenderWindow& _w)
 {
 	for (unsigned int i = 0; i < behaviours.size(); ++i)
 	{
