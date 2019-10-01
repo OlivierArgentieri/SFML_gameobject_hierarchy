@@ -34,6 +34,4 @@ public:
 	void SetOrigin(sf::Vector2f _newOrigin);
 
 	virtual void CenterPivot();
-
-	
 };
