@@ -5,6 +5,7 @@
 class SGH_Slider : public SGH_GameObject
 {
 private:
+	
 	SGH_GameObject* shape;
 	bool TriggerBoundary(sf::RenderWindow& _w);
 public :

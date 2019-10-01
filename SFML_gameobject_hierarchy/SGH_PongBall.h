@@ -4,9 +4,10 @@
 class SGH_PongBall : public SGH_GameObject 
 {
 private:
-
-
-public:
-	SGH_PongBall();
 	
+	sf::CircleShape* shape;
+public:
+	SGH_PongBall(float size);
+
+	~SGH_PongBall();
 };

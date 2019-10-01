@@ -22,7 +22,7 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	slider->SetPosition(renderWindow);
 	gameManager->AddGameObject(slider);
 
-	auto ball = new SGH_PongBall(); 
+	auto ball = new SGH_PongBall(10.0f); 
 	gameManager->AddGameObject(ball);
 	
 	Run(renderWindow);
