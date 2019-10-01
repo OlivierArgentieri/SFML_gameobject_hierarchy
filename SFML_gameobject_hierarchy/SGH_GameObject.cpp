@@ -4,7 +4,17 @@
 SGH_GameObject::SGH_GameObject()
 {
 	transform = nullptr;
-	//test comfhuhs
+}
+
+SGH_GameObject::SGH_GameObject(sf::Vector2f _size)
+{
+	width = _size.x;
+	height = _size.y;
+}
+
+SGH_GameObject::SGH_GameObject(float _radius)
+{
+	radius = _radius;
 }
 
 SGH_GameObject::~SGH_GameObject()
@@ -72,6 +82,15 @@ sf::Vector2f SGH_GameObject::GetOrigin()
 void SGH_GameObject::SetOrigin(sf::Vector2f _newOrigin)
 {
 	transform->setOrigin(_newOrigin);
+}
+
+sf::Vector2f SGH_GameObject::GetSize()
+{
+	return sf::Vector2f();
+}
+
+void SGH_GameObject::SetSize(sf::Vector2f _newSize)
+{
 }
 
 void SGH_GameObject::CenterPivot()

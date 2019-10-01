@@ -12,5 +12,7 @@ public:
 	SGH_Rect(sf::Vector2f _size);
 	~SGH_Rect();
 	void Update(sf::RenderWindow& _w) override;
+	void SetSize(sf::Vector2f _size);
+	sf::Vector2f GetSize();
 	void CenterPivot() override;
 };

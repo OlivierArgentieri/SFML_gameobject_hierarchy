@@ -1,14 +1,14 @@
 #pragma once
-#include "SGH_GameObject.h"
+#include "SGH_Rect.h"
 #include <iostream>
 
-class SGH_Slider : public SGH_GameObject
+class SGH_Slider : public SGH_Rect
 {
 private:
-	SGH_GameObject* shape;
+	SGH_Rect* shape;
 	bool TriggerBoundary(sf::RenderWindow& _w);
 public :
-	SGH_Slider(SGH_GameObject* _go);
+	SGH_Slider(SGH_Rect* _go);
 	~SGH_Slider();
 	void Update(sf::RenderWindow& _w) override;
 	void CatchEvent(sf::RenderWindow& _w, sf::Event _events) override;

@@ -27,6 +27,16 @@ void SGH_Rect::Update(sf::RenderWindow& _w)
 	_w.draw(*rectangle);
 }
 
+void SGH_Rect::SetSize(sf::Vector2f _size)
+{
+	rectangle->setSize(_size);
+}
+
+sf::Vector2f SGH_Rect::GetSize()
+{
+	return rectangle->getSize();
+}
+
 void SGH_Rect::CenterPivot()
 {
 	float x = this->rectangle->getSize().x / 2;

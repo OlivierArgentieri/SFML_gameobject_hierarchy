@@ -4,13 +4,13 @@ bool SGH_Slider::TriggerBoundary(sf::RenderWindow& _w)
 {
 	if (!shape)
 		return false;
-	if (shape->GetPosition().x - (shape->GetScale().x / 2) == 0)
+	if (shape->GetPosition().x - (shape->GetSize().x / 2) <= 0)
 		return true;
-	if (shape->GetPosition().x + (shape->GetScale().x / 2) == _w.getSize().x)
+	if (shape->GetPosition().x + (shape->GetSize().x / 2) >= _w.getSize().x)
 		return true;
 }
 
-SGH_Slider::SGH_Slider(SGH_GameObject* _go)
+SGH_Slider::SGH_Slider(SGH_Rect* _go)
 {
 	shape = _go;
 }
@@ -45,17 +45,16 @@ sf::Vector2f SGH_Slider::GetPosition()
 {
 	if (!shape) return sf::Vector2f();
 		return shape->GetPosition();
-	
 }
 
 void SGH_Slider::CatchEvent(sf::RenderWindow& _w, sf::Event _events)
 {
-	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Right /*&& TriggerBoundary(_w)*/)
+	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Right && TriggerBoundary(_w))
 	{
 		SetPosition(GetPosition() + sf::Vector2f(10,0));
 	}
 
-	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Left /*&& TriggerBoundary(_w)*/)
+	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Left && TriggerBoundary(_w))
 	{
 		SetPosition(GetPosition() - sf::Vector2f(10, 0));
 	}
