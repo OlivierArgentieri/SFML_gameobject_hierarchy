@@ -139,6 +139,7 @@
     <ClCompile Include="SGH_Circle.cpp" />
     <ClCompile Include="SGH_GameObject.cpp" />
     <ClCompile Include="SGH_GameObjectManager.cpp" />
+    <ClCompile Include="SGH_PongBall.cpp" />
     <ClCompile Include="SGH_Rect.cpp" />
     <ClCompile Include="SGH_Runtime.cpp" />
     <ClCompile Include="SGH_Slider.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="SGH_GameObject.h" />
     <ClInclude Include="SGH_GameObjectManager.h" />
     <ClInclude Include="SGH_MoveBehaviour.h" />
+    <ClInclude Include="SGH_PongBall.h" />
     <ClInclude Include="SGH_Rect.h" />
     <ClInclude Include="SGH_Runtime.h" />
     <ClInclude Include="SGH_Slider.h" />
