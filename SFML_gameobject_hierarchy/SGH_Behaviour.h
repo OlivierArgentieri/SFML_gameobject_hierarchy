@@ -3,8 +3,9 @@ class SGH_GameObject;
 
 class SGH_Behaviour
 {
-private:
+protected:
 	SGH_GameObject* gameObject;
 public:
+	SGH_Behaviour(SGH_GameObject* _go);
 	virtual void TriggerBehaviour() =0;
 };
