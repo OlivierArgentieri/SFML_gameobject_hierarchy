@@ -1,6 +1,7 @@
 #pragma once
 #include "SGH_Behaviour.h"
 
+
 class SGH_MoveBehaviour : public SGH_Behaviour
 {
 private:
@@ -10,4 +11,5 @@ public:
 	void SetMoveVector(sf::Vector2f	_v2f);
 	void SetMoveVector(float _x, float _y);
 	sf::Vector2f GetMoveVector();
+	virtual void TriggerBehaviour(sf::RenderWindow& _w);
 };

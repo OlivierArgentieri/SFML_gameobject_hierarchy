@@ -6,10 +6,10 @@ class SGH_Slider : public SGH_GameObject
 {
 private:
 	
-	SGH_GameObject* shape;
+	sf::RectangleShape* shape;
 	bool TriggerBoundary(sf::RenderWindow& _w);
 public :
-	SGH_Slider(SGH_GameObject* _go);
+	SGH_Slider(float width, float height);
 	~SGH_Slider();
 	void Update(sf::RenderWindow& _w) override;
 	void CatchEvent(sf::RenderWindow& _w, sf::Event _events) override;

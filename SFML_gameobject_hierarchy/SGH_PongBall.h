@@ -9,5 +9,6 @@ private:
 public:
 	SGH_PongBall(float size);
 
+	void Update(sf::RenderWindow& _w) override;
 	~SGH_PongBall();
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "SGH_GameObject.h"
+
 class SGH_Circle : public SGH_GameObject
 {
 private:
