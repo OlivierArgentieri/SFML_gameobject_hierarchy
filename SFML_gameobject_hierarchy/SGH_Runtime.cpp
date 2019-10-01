@@ -4,7 +4,7 @@
 #include "SGH_Slider.h"
 #include <iostream>
 
-
+//merge
 void SGH_Runtime::Run(sf::RenderWindow& _w)
 {
 	while (_w.isOpen())
