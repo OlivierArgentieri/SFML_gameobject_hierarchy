@@ -16,6 +16,10 @@ void SGH_GameObject::Update(sf::RenderWindow& _w)
 	// todo throw new exception 
 }
 
+void SGH_GameObject::ApplyBehaviour()
+{
+}
+
 
 sf::Vector2f SGH_GameObject::GetPosition()
 {

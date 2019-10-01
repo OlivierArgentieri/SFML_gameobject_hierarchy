@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Forms">
       <UniqueIdentifier>{c50ea8b4-72a5-4bf4-956e-070bb57acbe3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Behaviour">
+      <UniqueIdentifier>{ac80fcc0-48b1-4645-8051-09b6301b1641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Behaviour">
+      <UniqueIdentifier>{50793e1b-2df2-48b5-b32f-ff164a37ee54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -48,6 +54,12 @@
     <ClCompile Include="SGH_Circle.cpp">
       <Filter>Source Files\Forms</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_Behaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_BouncyBehaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -64,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="SGH_Circle.h">
       <Filter>Header Files\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Behaviour.h">
+      <Filter>Header Files\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_BouncyBehaviour.h">
+      <Filter>Header Files\Behaviour</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

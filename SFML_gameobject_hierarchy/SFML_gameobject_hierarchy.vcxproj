@@ -132,7 +132,9 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SGH_Behaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SGH_BouncyBehaviour.cpp" />
     <ClCompile Include="SGH_Circle.cpp" />
     <ClCompile Include="SGH_GameObject.cpp" />
     <ClCompile Include="SGH_GameObjectManager.cpp" />
@@ -140,6 +142,8 @@
     <ClCompile Include="SGH_Runtime.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SGH_Behaviour.h" />
+    <ClInclude Include="SGH_BouncyBehaviour.h" />
     <ClInclude Include="SGH_Circle.h" />
     <ClInclude Include="SGH_GameObject.h" />
     <ClInclude Include="SGH_GameObjectManager.h" />
