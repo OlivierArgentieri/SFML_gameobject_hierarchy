@@ -10,7 +10,7 @@ private:
 	
 protected:
 	sf::Transformable* transform;
-	std::vector<SGH_Behaviour>ListBehaviour;
+	std::vector<SGH_Behaviour> behviours;
 	float height;
 	float width;
 	

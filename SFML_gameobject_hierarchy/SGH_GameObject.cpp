@@ -18,6 +18,10 @@ void SGH_GameObject::Update(sf::RenderWindow& _w)
 
 void SGH_GameObject::ApplyBehaviour()
 {
+	for (int i = 0; i < behaviours.size()-1; ++i)
+	{
+		behaviours[i].TriggerBehaviour();
+	}
 }
 
 
