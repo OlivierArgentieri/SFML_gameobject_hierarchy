@@ -7,7 +7,7 @@ private:
 	sf::Vector2f moveVector;
 public:
 	SGH_MoveBehaviour(SGH_GameObject* _go) : SGH_Behaviour(_go){}
-	void SetMoveVector(sf::Vector2f	_v2f);
-	void SetMoveVector(float _x, float _y);
-	sf::Vector2f GetMoveVector();
+	virtual void SetMoveVector(sf::Vector2f	_v2f);
+	virtual void SetMoveVector(float _x, float _y);
+	virtual sf::Vector2f GetMoveVector();
 };
