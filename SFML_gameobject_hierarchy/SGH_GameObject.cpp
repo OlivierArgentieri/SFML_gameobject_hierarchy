@@ -4,6 +4,7 @@
 SGH_GameObject::SGH_GameObject()
 {
 	transform = nullptr;
+	//test comfhuhs
 }
 
 SGH_GameObject::~SGH_GameObject()
@@ -16,14 +17,13 @@ void SGH_GameObject::Update(sf::RenderWindow& _w)
 	// todo throw new exception 
 }
 
-void SGH_GameObject::ApplyBehaviour()
+void SGH_GameObject::ApplyBehaviour() 
 {
-	for (int i = 0; i < behaviours.size()-1; ++i)
+	for (unsigned int i = 0; i < behaviours.size(); ++i)
 	{
 		behaviours[i].TriggerBehaviour();
 	}
 }
-
 
 sf::Vector2f SGH_GameObject::GetPosition()
 {
