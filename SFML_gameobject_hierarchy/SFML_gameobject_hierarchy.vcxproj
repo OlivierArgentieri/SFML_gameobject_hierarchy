@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="SGH_MoveBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SGH_Behaviour.cpp" />
@@ -140,6 +141,7 @@
     <ClCompile Include="SGH_GameObjectManager.cpp" />
     <ClCompile Include="SGH_Rect.cpp" />
     <ClCompile Include="SGH_Runtime.cpp" />
+    <ClCompile Include="SGH_Slider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Behaviour.h" />
@@ -147,8 +149,10 @@
     <ClInclude Include="SGH_Circle.h" />
     <ClInclude Include="SGH_GameObject.h" />
     <ClInclude Include="SGH_GameObjectManager.h" />
+    <ClInclude Include="SGH_MoveBehaviour.h" />
     <ClInclude Include="SGH_Rect.h" />
     <ClInclude Include="SGH_Runtime.h" />
+    <ClInclude Include="SGH_Slider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

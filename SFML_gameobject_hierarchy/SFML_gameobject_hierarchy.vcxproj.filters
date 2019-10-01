@@ -34,6 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="SGH_MoveBehaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -60,6 +63,9 @@
     <ClCompile Include="SGH_BouncyBehaviour.cpp">
       <Filter>Source Files\Behaviour</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_Slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -82,6 +88,12 @@
     </ClInclude>
     <ClInclude Include="SGH_BouncyBehaviour.h">
       <Filter>Header Files\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_MoveBehaviour.h">
+      <Filter>Header Files\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Slider.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

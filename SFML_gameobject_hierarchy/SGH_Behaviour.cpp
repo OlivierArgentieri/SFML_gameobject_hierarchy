@@ -1,5 +1,11 @@
 #include "SGH_Behaviour.h"
+#include "SGH_GameObject.h"
 
-void SGH_Behaviour::TriggerBehaviour()
+SGH_Behaviour::SGH_Behaviour(SGH_GameObject* _go)
+{
+	gameObject = _go;
+}
+
+void SGH_Behaviour::TriggerBehaviour(sf::RenderWindow& _w)
 {
 }

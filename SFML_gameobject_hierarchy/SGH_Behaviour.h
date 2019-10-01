@@ -1,10 +1,13 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 class SGH_GameObject;
+
 
 class SGH_Behaviour
 {
-private:
+protected:
 	SGH_GameObject* gameObject;
 public:
-	virtual void TriggerBehaviour() =0;
+	SGH_Behaviour(SGH_GameObject* _go);
+	virtual void TriggerBehaviour(sf::RenderWindow& _w);
 };
