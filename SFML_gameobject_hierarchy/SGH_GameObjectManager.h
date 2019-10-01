@@ -14,4 +14,5 @@ public:
 	void AddGameObject(SGH_GameObject* _go);
 	void RemoveGameObject();
 	void UpdateAll(sf::RenderWindow& _w);
+	void CatchAllEvents(sf::RenderWindow& _w, sf::Event _events);
 };

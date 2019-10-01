@@ -19,10 +19,11 @@ public:
 	~SGH_GameObject();
 	virtual void Update(sf::RenderWindow& _w);
 	virtual void ApplyBehaviour(sf::RenderWindow& _w);
+	virtual void CatchEvent(sf::RenderWindow& _w, sf::Event _events);
 
-	sf::Vector2f GetPosition();
+	virtual sf::Vector2f GetPosition();
 	void SetPosition(float _width, float _height);
-	void SetPosition(sf::Vector2f _newPosition);
+	virtual void SetPosition(sf::Vector2f _newPosition);
 
 	float GetRotation();
 	void SetRotation(float _newRotation);
@@ -32,6 +33,7 @@ public:
 
 	sf::Vector2f GetOrigin();
 	void SetOrigin(sf::Vector2f _newOrigin);
+
 
 	virtual void CenterPivot();
 };

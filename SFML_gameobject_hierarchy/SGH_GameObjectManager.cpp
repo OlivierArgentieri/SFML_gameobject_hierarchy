@@ -30,3 +30,11 @@ void SGH_GameObjectManager::UpdateAll(sf::RenderWindow& _w)
 		this->gameObjects[i]->Update(_w);
 	}
 }
+
+void SGH_GameObjectManager::CatchAllEvents(sf::RenderWindow& _w, sf::Event _events)
+{
+	for (int i = 0; i < this->gameObjects.size(); ++i)
+	{
+		this->gameObjects[i]->CatchEvent(_w, _events);
+	}
+}

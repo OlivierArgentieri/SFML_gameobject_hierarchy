@@ -25,6 +25,10 @@ void SGH_GameObject::ApplyBehaviour(sf::RenderWindow& _w)
 	}
 }
 
+void SGH_GameObject::CatchEvent(sf::RenderWindow& _w, sf::Event _events)
+{
+}
+
 sf::Vector2f SGH_GameObject::GetPosition()
 {
 	return transform->getPosition();
