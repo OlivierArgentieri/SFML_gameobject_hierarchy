@@ -8,6 +8,7 @@ bool SGH_Slider::TriggerBoundary(sf::RenderWindow& _w)
 		return true;
 	if (shape->GetPosition().x + (shape->GetScale().x / 2) == _w.getSize().x)
 		return true;
+	return true;
 }
 
 SGH_Slider::SGH_Slider(SGH_GameObject* _go)

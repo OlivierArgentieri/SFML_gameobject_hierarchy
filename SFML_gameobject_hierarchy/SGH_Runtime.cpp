@@ -3,6 +3,7 @@
 #include "SGH_Circle.h"
 #include "SGH_Slider.h"
 #include <iostream>
+#include "SGH_PongBall.h"
 
 //merge
 void SGH_Runtime::Run(sf::RenderWindow& _w)
@@ -20,6 +21,10 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	SGH_Slider* slider = new SGH_Slider(new SGH_Rect(100, 10));
 	slider->SetPosition(renderWindow);
 	gameManager->AddGameObject(slider);
+
+	auto ball = new SGH_PongBall(10.0f); 
+	gameManager->AddGameObject(ball);
+	
 	Run(renderWindow);
 }
 
@@ -46,5 +51,4 @@ void SGH_Runtime::Event(sf::RenderWindow& _w)
 			_w.close();
 		gameManager->CatchAllEvents(_w, _events);
 	}
-
 }

@@ -37,6 +37,7 @@
     <None Include="SGH_MoveBehaviour.cpp">
       <Filter>Source Files\Behaviour</Filter>
     </None>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

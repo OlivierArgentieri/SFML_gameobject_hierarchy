@@ -1,8 +1,10 @@
 #pragma once
-#include "SGH_Behaviour.h"
+//#include "SGH_Behaviour.h"
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics.hpp>
 #include <vector>
+
+class SGH_Behaviour;
 
 class SGH_GameObject
 {
@@ -17,6 +19,8 @@ protected:
 public:
 	SGH_GameObject();
 	~SGH_GameObject();
+	SGH_GameObject(sf::Transformable* _tranformable);
+
 	virtual void Update(sf::RenderWindow& _w);
 	virtual void ApplyBehaviour(sf::RenderWindow& _w);
 	virtual void CatchEvent(sf::RenderWindow& _w, sf::Event _events);
@@ -34,6 +38,6 @@ public:
 	sf::Vector2f GetOrigin();
 	void SetOrigin(sf::Vector2f _newOrigin);
 
-
 	virtual void CenterPivot();
+
 };
