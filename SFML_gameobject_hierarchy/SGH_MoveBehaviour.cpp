@@ -14,3 +14,7 @@ sf::Vector2f SGH_MoveBehaviour::GetMoveVector()
 {
 	return moveVector;
 }
+
+void SGH_MoveBehaviour::TriggerBehaviour(sf::RenderWindow& _w)
+{
+}
