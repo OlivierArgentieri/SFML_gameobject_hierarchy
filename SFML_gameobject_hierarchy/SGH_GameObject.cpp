@@ -1,15 +1,20 @@
 #include "SGH_GameObject.h"
 #include <SFML/Graphics/RenderWindow.hpp>
+#include "SGH_Behaviour.h"
 
 SGH_GameObject::SGH_GameObject()
 {
 	transform = nullptr;
-	//test comfhuhs
 }
 
 SGH_GameObject::~SGH_GameObject()
 {
 	delete transform;
+}
+
+SGH_GameObject::SGH_GameObject(sf::Transformable* _tranformable)
+{
+	transform = _tranformable;
 }
 
 void SGH_GameObject::Update(sf::RenderWindow& _w)

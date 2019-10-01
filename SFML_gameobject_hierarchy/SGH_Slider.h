@@ -16,4 +16,3 @@ public :
 	void SetPosition(sf::RenderWindow& _w);
 	sf::Vector2f GetPosition()override;
 };
-

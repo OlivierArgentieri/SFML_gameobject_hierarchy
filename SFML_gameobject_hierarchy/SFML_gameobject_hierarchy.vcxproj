@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="SGH_MoveBehaviour.cpp" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SGH_Behaviour.cpp" />
@@ -143,6 +143,7 @@
     <ClCompile Include="SGH_Rect.cpp" />
     <ClCompile Include="SGH_Runtime.cpp" />
     <ClCompile Include="SGH_Slider.cpp" />
+	<ClCompile Include="SGH_MoveBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Behaviour.h" />

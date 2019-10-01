@@ -10,7 +10,6 @@ private:
 	bool IsHitBottomEdgeWindow(sf::RenderWindow& _w);
 	void Bounce(sf::RenderWindow& _w);
 
-	
 public:
 	SGH_BouncyBehaviour(SGH_GameObject* _go) : SGH_MoveBehaviour(_go){}
 	void TriggerBehaviour(sf::RenderWindow& _w) override;

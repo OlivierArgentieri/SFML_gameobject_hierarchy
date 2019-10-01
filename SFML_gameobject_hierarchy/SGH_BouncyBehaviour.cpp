@@ -35,13 +35,13 @@ void SGH_BouncyBehaviour::Bounce(sf::RenderWindow& _w)
 {
 	if (IsHitTopEdgeWindow(_w) || IsHitBottomEdgeWindow(_w))
 	{
-		SetMoveVector(GetMoveVector().x, -GetMoveVector().y);
+		SGH_MoveBehaviour::SetMoveVector(SGH_MoveBehaviour::GetMoveVector().x, -SGH_MoveBehaviour::GetMoveVector().y);
 		return;
 	}
 	
 	if (IsHitLeftEdgeWindow(_w) || IsHitRightEdgeWindow(_w))
 	{
-		SetMoveVector(-this->GetMoveVector().x, this->GetMoveVector().y);
+		//SetMoveVector(-this->GetMoveVector().x, this->GetMoveVector().y);
 	}
-	gameObject->SetPosition(gameObject->GetPosition() + GetMoveVector());
+	//gameObject->SetPosition(gameObject->GetPosition() + GetMoveVector());
 }
