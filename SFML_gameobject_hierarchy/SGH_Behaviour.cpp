@@ -1,4 +1,5 @@
 #include "SGH_Behaviour.h"
+#include "SGH_GameObject.h"
 
 SGH_Behaviour::SGH_Behaviour(SGH_GameObject* _go)
 {
