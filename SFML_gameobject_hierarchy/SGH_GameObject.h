@@ -9,7 +9,8 @@ private:
 
 protected:
 	sf::Transformable* transform;
-
+	float height;
+	float width;
 	
 public:
 	SGH_GameObject();
