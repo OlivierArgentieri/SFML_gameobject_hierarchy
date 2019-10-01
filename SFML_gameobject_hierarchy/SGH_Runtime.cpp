@@ -21,13 +21,13 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(800, 400), "window", sf:
 	auto test = new SGH_Rect();
 	auto test2 = new SGH_Rect();
 	auto test3 = new SGH_Rect();
-	auto slider = new SGH_Slider(new ());
+	//auto slider = new SGH_Slider();
 	test->CenterPivot();
 	test2->CenterPivot();
 	test->SetPosition(sf::Vector2f(400, 200));
 	test2->SetPosition(sf::Vector2f(400, 400));
-	slider->SetPosition(sf::Vector2f(200, 200));
-	gameManager->AddGameObject(slider);
+	//slider->SetPosition(sf::Vector2f(200, 200));
+	//gameManager->AddGameObject(slider);
 	gameManager->AddGameObject(test);
 	gameManager->AddGameObject(test2);
 	gameManager->AddGameObject(test3);
