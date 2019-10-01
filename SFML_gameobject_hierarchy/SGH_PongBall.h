@@ -8,7 +8,7 @@ private:
 	sf::CircleShape* shape;
 public:
 	SGH_PongBall(float size);
-
 	void Update(sf::RenderWindow& _w) override;
+	void CenterPivot() override;
 	~SGH_PongBall();
 };
