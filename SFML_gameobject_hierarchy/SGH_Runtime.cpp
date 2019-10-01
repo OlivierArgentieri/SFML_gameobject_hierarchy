@@ -4,7 +4,7 @@
 #include "SGH_Slider.h"
 #include <iostream>
 
-
+//merge
 void SGH_Runtime::Run(sf::RenderWindow& _w)
 {
 	while (_w.isOpen())
@@ -14,24 +14,12 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 	}
 }
 
-SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(800, 400), "window", sf::Style::Close)
+SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf::Style::Close)
 {
-	gameManager = new SGH_GameObjectManager();
-
-	auto test = new SGH_Rect();
-	auto test2 = new SGH_Rect();
-	auto test3 = new SGH_Rect();
-	//auto slider = new SGH_Slider();
-	test->CenterPivot();
-	test2->CenterPivot();
-	test->SetPosition(sf::Vector2f(400, 200));
-	test2->SetPosition(sf::Vector2f(400, 400));
-	//slider->SetPosition(sf::Vector2f(200, 200));
-	//gameManager->AddGameObject(slider);
-	gameManager->AddGameObject(test);
-	gameManager->AddGameObject(test2);
-	gameManager->AddGameObject(test3);
-	//gameManager->AddGameObject(new SGH_Circle());
+	gameManager = new SGH_GameObjectManager(
+	SGH_Slider* slider = new SGH_Slider(new SGH_Rect(100, 10));
+	slider->SetPosition(renderWindow);
+	gameManager->AddGameObject(slider);
 	Run(renderWindow);
 }
 
