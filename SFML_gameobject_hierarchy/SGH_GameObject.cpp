@@ -24,7 +24,6 @@ void SGH_GameObject::ApplyBehaviour()
 	}
 }
 
-
 sf::Vector2f SGH_GameObject::GetPosition()
 {
 	return transform->getPosition();
