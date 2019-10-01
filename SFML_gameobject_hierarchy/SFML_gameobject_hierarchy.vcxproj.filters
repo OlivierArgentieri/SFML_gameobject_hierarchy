@@ -64,7 +64,10 @@
       <Filter>Source Files\Behaviour</Filter>
     </ClCompile>
     <ClCompile Include="SGH_Slider.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_PongBall.cpp">
+      <Filter>Source Files\Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +96,10 @@
       <Filter>Header Files\Behaviour</Filter>
     </ClInclude>
     <ClInclude Include="SGH_Slider.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_PongBall.h">
+      <Filter>Header Files\Forms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
