@@ -5,10 +5,11 @@
 class SGH_Slider : public SGH_GameObject
 {
 private:
-	
+
 	sf::RectangleShape* shape;
-	bool TriggerBoundary(sf::RenderWindow& _w);
-public :
+	bool HitTop(sf::RenderWindow& _w, float offset = 10);
+	bool HitBottom(sf::RenderWindow& _w, float offset = 20);
+public:
 	SGH_Slider(float width, float height);
 	~SGH_Slider();
 	void Update(sf::RenderWindow& _w) override;
@@ -16,4 +17,5 @@ public :
 	void SetPosition(sf::Vector2f _pos)override;
 	void SetPosition(sf::RenderWindow& _w);
 	sf::Vector2f GetPosition()override;
+	void CenterPivot() override;
 };

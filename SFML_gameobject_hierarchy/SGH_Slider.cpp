@@ -1,9 +1,14 @@
 #include "SGH_Slider.h"
 
-bool SGH_Slider::TriggerBoundary(sf::RenderWindow& _w)
-{
 
-	return true;
+bool SGH_Slider::HitTop(sf::RenderWindow& _w, float offset)
+{
+	return shape->getPosition().y - shape->getOrigin().y * shape->getScale().y <= offset;
+}
+
+bool SGH_Slider::HitBottom(sf::RenderWindow& _w, float offset)
+{
+	return shape->getPosition().y + shape->getOrigin().y * shape->getScale().y > _w.getSize().y - offset;
 }
 
 SGH_Slider::SGH_Slider(float width, float height)
@@ -23,7 +28,6 @@ void SGH_Slider::Update(sf::RenderWindow& _w)
 
 void SGH_Slider::SetPosition(sf::Vector2f _pos)
 {
-
 	shape->setPosition(_pos);
 	//if (shape)shape->SetPosition(_pos);
 }
@@ -32,25 +36,29 @@ void SGH_Slider::SetPosition(sf::RenderWindow& _w)
 {
 	if (shape)
 	{
-		shape->setPosition(_w.getSize().x / 2, _w.getSize().y - 20);
+		shape->setPosition(20, _w.getSize().y/2);
 	}
 }
 
 sf::Vector2f SGH_Slider::GetPosition()
 {
 	return shape->getPosition();
+}
 
+void SGH_Slider::CenterPivot()
+{
+	shape->setOrigin(shape->getSize().x / 2, shape->getSize().y / 2);
 }
 
 void SGH_Slider::CatchEvent(sf::RenderWindow& _w, sf::Event _events)
 {
-	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Right /*&& TriggerBoundary(_w)*/)
+	if (_events.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !HitBottom(_w))
 	{
-		SetPosition(GetPosition() + sf::Vector2f(10, 0));
+		SetPosition(GetPosition() + sf::Vector2f(0, 10));
 	}
 
-	if (_events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::Left /*&& TriggerBoundary(_w)*/)
+	if (_events.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::W) && !HitTop(_w))
 	{
-		SetPosition(GetPosition() - sf::Vector2f(10, 0));
+		SetPosition(GetPosition() - sf::Vector2f(0, 10));
 	}
 }
