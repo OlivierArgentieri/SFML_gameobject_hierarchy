@@ -1,4 +1,5 @@
 #include "SGH_Slider.h"
+#include "SGH_PongBehaviour.h"
 
 
 bool SGH_Slider::HitTop(sf::RenderWindow& _w, float offset)
@@ -23,6 +24,7 @@ SGH_Slider::~SGH_Slider()
 
 void SGH_Slider::Update(sf::RenderWindow& _w)
 {
+	ApplyBehaviour(_w);
 	_w.draw(*shape);
 }
 
@@ -48,6 +50,17 @@ sf::Vector2f SGH_Slider::GetPosition()
 void SGH_Slider::CenterPivot()
 {
 	shape->setOrigin(shape->getSize().x / 2, shape->getSize().y / 2);
+}
+
+sf::FloatRect SGH_Slider::GetLocalBounds()
+{
+	return shape->getGlobalBounds();
+}
+
+void SGH_Slider::AddPongBalls(SGH_PongBall* _pongBall)
+{
+	this->pongBalls.push_back(_pongBall);
+	this->behaviours.push_back(new SGH_PongBehaviour(this, _pongBall, 10));
 }
 
 void SGH_Slider::CatchEvent(sf::RenderWindow& _w, sf::Event _events)

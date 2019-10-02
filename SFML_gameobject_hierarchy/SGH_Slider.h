@@ -1,12 +1,14 @@
 #pragma once
 #include "SGH_GameObject.h"
 #include <iostream>
+#include "SGH_PongBall.h"
 
 class SGH_Slider : public SGH_GameObject
 {
 private:
 
 	sf::RectangleShape* shape;
+	std::vector<SGH_PongBall*> pongBalls;
 	bool HitTop(sf::RenderWindow& _w, float offset = 10);
 	bool HitBottom(sf::RenderWindow& _w, float offset = 20);
 public:
@@ -18,4 +20,7 @@ public:
 	void SetPosition(sf::RenderWindow& _w);
 	sf::Vector2f GetPosition()override;
 	void CenterPivot() override;
+	sf::FloatRect GetLocalBounds();
+	void AddPongBalls(SGH_PongBall* _pongBall);
+	
 };

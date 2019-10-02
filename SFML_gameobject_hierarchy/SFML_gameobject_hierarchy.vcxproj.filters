@@ -73,6 +73,9 @@
     <ClCompile Include="SGH_DestroyBehaviour.cpp">
       <Filter>Source Files\Behaviour</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_PongBehaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -106,6 +109,9 @@
       <Filter>Header Files\Forms</Filter>
     </ClInclude>
     <ClInclude Include="SGH_DestroyBehaviour.h">
+      <Filter>Header Files\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_PongBehaviour.h">
       <Filter>Header Files\Behaviour</Filter>
     </ClInclude>
   </ItemGroup>
