@@ -1,25 +1,21 @@
 #include "SGH_GameObject.h"
 #include <SFML/Graphics/RenderWindow.hpp>
+#include "SGH_Behaviour.h"
+#include "SGH_BouncyBehaviour.h"
 
 SGH_GameObject::SGH_GameObject()
 {
 	transform = nullptr;
 }
 
-SGH_GameObject::SGH_GameObject(sf::Vector2f _size)
-{
-	width = _size.x;
-	height = _size.y;
-}
-
-SGH_GameObject::SGH_GameObject(float _radius)
-{
-	radius = _radius;
-}
-
 SGH_GameObject::~SGH_GameObject()
 {
 	delete transform;
+}
+
+SGH_GameObject::SGH_GameObject(sf::Transformable* _tranformable)
+{
+	transform = _tranformable;
 }
 
 void SGH_GameObject::Update(sf::RenderWindow& _w)
@@ -31,7 +27,7 @@ void SGH_GameObject::ApplyBehaviour(sf::RenderWindow& _w)
 {
 	for (unsigned int i = 0; i < behaviours.size(); ++i)
 	{
-		behaviours[i].TriggerBehaviour(_w);
+		behaviours[i]->TriggerBehaviour(_w);
 	}
 }
 

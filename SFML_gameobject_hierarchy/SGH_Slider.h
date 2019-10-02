@@ -5,15 +5,16 @@
 class SGH_Slider : public SGH_Rect
 {
 private:
-	SGH_Rect* shape;
-	bool TriggerBoundary(sf::RenderWindow& _w);
-public :
-	SGH_Slider(SGH_Rect* _go);
+	sf::RectangleShape* shape;
+	bool HitTop(sf::RenderWindow& _w, float offset = 10);
+	bool HitBottom(sf::RenderWindow& _w, float offset = 20);
+public:
+	SGH_Slider(float width, float height);
 	~SGH_Slider();
 	void Update(sf::RenderWindow& _w) override;
 	void CatchEvent(sf::RenderWindow& _w, sf::Event _events) override;
 	void SetPosition(sf::Vector2f _pos)override;
 	void SetPosition(sf::RenderWindow& _w);
 	sf::Vector2f GetPosition()override;
+	void CenterPivot() override;
 };
-
