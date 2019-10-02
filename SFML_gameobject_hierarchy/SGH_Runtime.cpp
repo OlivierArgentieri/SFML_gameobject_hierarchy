@@ -32,6 +32,8 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	auto ball = new SGH_PongBall(10.0f);
 	ball->SetPosition(10, 10);
 	ball->CenterPivot();
+
+	slider->AddPongBalls(ball);
 	
 	gameManager->AddGameObject(ball);
 	Run(renderWindow);
