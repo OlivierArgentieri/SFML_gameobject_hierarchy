@@ -13,8 +13,8 @@ private:
 protected:
 	sf::Transformable* transform;
 	std::vector<SGH_Behaviour*> behaviours;
-	float height;
-	float width;
+
+	void ClearBehaviours();
 	
 public:
 	SGH_GameObject();
@@ -39,5 +39,4 @@ public:
 	void SetOrigin(sf::Vector2f _newOrigin);
 
 	virtual void CenterPivot();
-
 };

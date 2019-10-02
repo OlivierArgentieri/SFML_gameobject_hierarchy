@@ -1,6 +1,5 @@
 #include "SGH_PongBehaviour.h"
 
-
 bool SGH_PongBehaviour::IsHitSlider()
 {
 	return this->slider->GetLocalBounds().intersects(this->pongBall->GetLocalBounds());

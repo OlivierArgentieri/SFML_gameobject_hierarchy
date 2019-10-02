@@ -5,6 +5,13 @@ SGH_Circle::SGH_Circle()
 	circle = new sf::CircleShape(100.0f);
 	transform = circle;
 }
+
+SGH_Circle::SGH_Circle(float _size)
+{
+	circle = new sf::CircleShape(_size / 2);
+	transform = circle;
+}
+
 SGH_Circle::SGH_Circle(const SGH_Circle& _ref)
 {
 	circle = _ref.circle;

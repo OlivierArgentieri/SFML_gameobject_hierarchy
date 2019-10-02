@@ -6,11 +6,11 @@
 class SGH_Slider : public SGH_GameObject
 {
 private:
-
 	sf::RectangleShape* shape;
 	std::vector<SGH_PongBall*> pongBalls;
 	bool HitTop(sf::RenderWindow& _w, float offset = 10);
 	bool HitBottom(sf::RenderWindow& _w, float offset = 20);
+	
 public:
 	SGH_Slider(float width, float height);
 	~SGH_Slider();
@@ -18,7 +18,7 @@ public:
 	void CatchEvent(sf::RenderWindow& _w, sf::Event _events) override;
 	void SetPosition(sf::Vector2f _pos)override;
 	void SetPosition(sf::RenderWindow& _w);
-	sf::Vector2f GetPosition()override;
+	sf::Vector2f GetPosition() override;
 	void CenterPivot() override;
 	sf::FloatRect GetLocalBounds();
 	void AddPongBalls(SGH_PongBall* _pongBall);
