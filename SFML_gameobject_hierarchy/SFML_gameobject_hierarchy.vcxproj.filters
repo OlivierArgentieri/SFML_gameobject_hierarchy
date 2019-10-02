@@ -34,9 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="SGH_MoveBehaviour.cpp">
-      <Filter>Source Files\Behaviour</Filter>
-    </None>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +67,12 @@
     <ClCompile Include="SGH_PongBall.cpp">
       <Filter>Source Files\Forms</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_MoveBehaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_DestroyBehaviour.cpp">
+      <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -101,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="SGH_PongBall.h">
       <Filter>Header Files\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_DestroyBehaviour.h">
+      <Filter>Header Files\Behaviour</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
