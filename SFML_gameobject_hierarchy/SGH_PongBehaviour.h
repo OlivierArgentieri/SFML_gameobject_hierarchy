@@ -21,4 +21,3 @@ public:
 	
 	void TriggerBehaviour(sf::RenderWindow& _w) override;
 };
-

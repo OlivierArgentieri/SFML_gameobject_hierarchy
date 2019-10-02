@@ -1,7 +1,6 @@
 #include "SGH_Slider.h"
 #include "SGH_PongBehaviour.h"
 
-
 bool SGH_Slider::HitTop(sf::RenderWindow& _w, float offset)
 {
 	return shape->getPosition().y - shape->getOrigin().y * shape->getScale().y <= offset;
@@ -31,15 +30,11 @@ void SGH_Slider::Update(sf::RenderWindow& _w)
 void SGH_Slider::SetPosition(sf::Vector2f _pos)
 {
 	shape->setPosition(_pos);
-	//if (shape)shape->SetPosition(_pos);
 }
 
 void SGH_Slider::SetPosition(sf::RenderWindow& _w)
 {
-	if (shape)
-	{
-		shape->setPosition(20, _w.getSize().y/2);
-	}
+	shape->setPosition(20, _w.getSize().y/2);
 }
 
 sf::Vector2f SGH_Slider::GetPosition()
@@ -59,12 +54,14 @@ sf::FloatRect SGH_Slider::GetLocalBounds()
 
 void SGH_Slider::AddPongBalls(SGH_PongBall* _pongBall)
 {
+	// todo 
 	this->pongBalls.push_back(_pongBall);
 	this->behaviours.push_back(new SGH_PongBehaviour(this, _pongBall, 10));
 }
 
 void SGH_Slider::CatchEvent(sf::RenderWindow& _w, sf::Event _events)
 {
+	//todo
 	if (_events.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !HitBottom(_w))
 	{
 		SetPosition(GetPosition() + sf::Vector2f(0, 10));
