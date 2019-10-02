@@ -38,9 +38,15 @@ void SGH_BouncyBehaviour::Bounce(sf::RenderWindow& _w)
 		SetMoveVector(GetMoveVector().x, -GetMoveVector().y);
 		
 	}
-	if (IsHitLeftEdgeWindow(_w) || IsHitRightEdgeWindow(_w))
+	if (IsHitRightEdgeWindow(_w))
 	{
 		SetMoveVector(-this->GetMoveVector().x, this->GetMoveVector().y);
 	}
+
+	if (IsHitLeftEdgeWindow(_w))
+	{
+		this->gameObject->SetPosition(sf::Vector2f(_w.getSize().x / 2, _w.getSize().y / 2));
+	}
+	
 	gameObject->SetPosition(gameObject->GetPosition() + GetMoveVector());
 }

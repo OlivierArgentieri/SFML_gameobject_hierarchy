@@ -4,7 +4,7 @@
 SGH_PongBall::SGH_PongBall(float size) : SGH_GameObject()
 {
 	shape = new sf::CircleShape(size/2);
-	behaviours.push_back(new SGH_BouncyBehaviour(this, 0.1));
+	behaviours.push_back(new SGH_BouncyBehaviour(this, 5));
 	transform = shape;
 
 }

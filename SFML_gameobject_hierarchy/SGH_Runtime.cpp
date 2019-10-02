@@ -5,13 +5,19 @@
 #include <iostream>
 #include "SGH_PongBall.h"
 
-//merge
 void SGH_Runtime::Run(sf::RenderWindow& _w)
 {
+	sf::Clock _clock;
+	sf::Time _deltaTime = sf::Time::Zero;
 	while (_w.isOpen())
 	{
-		Event(_w);
-		Render(_w);
+		_deltaTime += _clock.restart();
+		while (_deltaTime > frameRate)
+		{
+			_deltaTime -= frameRate;
+			Event(_w);
+			Render(_w);
+		}
 	}
 }
 
