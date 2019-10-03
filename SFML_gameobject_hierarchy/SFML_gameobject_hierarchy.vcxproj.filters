@@ -100,6 +100,9 @@
     <ClCompile Include="SGH_GameObject.cpp">
       <Filter>Source Files\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="SGH_GameManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_Runtime.h">
@@ -149,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="SGH_PlayerManager.h">
       <Filter>Header Files\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_GameManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -136,6 +136,7 @@
     <ClCompile Include="SGH_Behaviour.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGH_BouncyBehaviour.cpp" />
+    <ClCompile Include="SGH_GameManager.cpp" />
     <ClCompile Include="SGH_InputManager.cpp" />
     <ClCompile Include="SGH_Player.cpp" />
     <ClCompile Include="SGH_PlayerManager.cpp" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_ControllableGameObject.h" />
+    <ClInclude Include="SGH_GameManager.h" />
     <ClInclude Include="SGH_InputManager.h" />
     <ClInclude Include="SGH_Player.h" />
     <ClInclude Include="SGH_Behaviour.h" />
