@@ -1,15 +1,8 @@
 #include "SGH_PongBall.h"
 #include "SGH_BouncyBehaviour.h"
 
-void SGH_PongBall::ResetBall(sf::RenderWindow&  _w)
-{
-	shape->setPosition(_w.getSize().x / 2, _w.getSize().y / 2);
-}
 
-bool SGH_PongBall::HitLeftWindow()
-{
-	return shape->getPosition().x - shape->getOrigin().x * shape->getScale().x <= 0;
-}
+
 
 SGH_PongBall::SGH_PongBall(float size) : SGH_GameObject()
 {
@@ -26,10 +19,12 @@ sf::FloatRect SGH_PongBall::GetLocalBounds()
 
 void SGH_PongBall::Update(sf::RenderWindow& _w)
 {
-	ApplyBehaviour(_w);
 	_w.draw(*shape);
-	if (HitLeftWindow())
-		ResetBall(_w);
+
+	if (IsPause()) return;
+
+		ApplyBehaviour(_w);
+	
 }
 
 void SGH_PongBall::CenterPivot()
@@ -45,6 +40,11 @@ void SGH_PongBall::SetMoveVector(sf::Vector2f _moveVector)
 sf::Vector2f SGH_PongBall::GetMoveVector()
 {
 	return bouncy_behaviour->GetMoveVector();
+}
+
+float SGH_PongBall::GetSize()
+{
+	return shape->getRadius();
 }
 
 SGH_PongBall::~SGH_PongBall()

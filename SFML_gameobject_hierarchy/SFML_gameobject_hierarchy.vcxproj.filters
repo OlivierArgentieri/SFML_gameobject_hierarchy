@@ -31,6 +31,18 @@
     <Filter Include="Source Files\Behaviour">
       <UniqueIdentifier>{50793e1b-2df2-48b5-b32f-ff164a37ee54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{f897fb3e-9a78-43ea-b5fc-e427279c898e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{00a05d32-489f-4f75-9261-3117b34bf628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObject">
+      <UniqueIdentifier>{31c7d1b1-a675-423c-91b8-e8a20d8ec04c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject">
+      <UniqueIdentifier>{6489e691-9468-4fed-9de5-41a83b6efaa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -41,9 +53,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SGH_Runtime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SGH_GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SGH_GameObjectManager.cpp">
@@ -75,6 +84,24 @@
     </ClCompile>
     <ClCompile Include="SGH_PongBehaviour.cpp">
       <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_Player.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_PlayerManager.cpp">
+      <Filter>Source Files\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_InputManager.cpp">
+      <Filter>Source Files\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_ControllableGameObject.cpp">
+      <Filter>Source Files\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_GameObject.cpp">
+      <Filter>Source Files\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_GameManager.cpp">
+      <Filter>Source Files\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +140,21 @@
     </ClInclude>
     <ClInclude Include="SGH_PongBehaviour.h">
       <Filter>Header Files\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Player.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_ControllableGameObject.h">
+      <Filter>Header Files\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_InputManager.h">
+      <Filter>Header Files\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_PlayerManager.h">
+      <Filter>Header Files\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_GameManager.h">
+      <Filter>Header Files\Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
