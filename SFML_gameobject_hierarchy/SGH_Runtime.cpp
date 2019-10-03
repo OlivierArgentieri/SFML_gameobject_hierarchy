@@ -60,12 +60,9 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	player2->SetDownKey(SGH_InputManager::GetInputDownPlayerTwo());
 	playerManager->AddPlayer(player2);
 
-
 	SGH_GameManager::GetInstance()->AddPlayer(player);
 	SGH_GameManager::GetInstance()->AddPlayer(player2);
 	SGH_GameManager::GetInstance()->AddPongBall(ball);
-	SGH_GameManager::GetInstance()->AddSlider(slider);
-	SGH_GameManager::GetInstance()->AddSlider(slider2);
 	Run(renderWindow);
 }
 
