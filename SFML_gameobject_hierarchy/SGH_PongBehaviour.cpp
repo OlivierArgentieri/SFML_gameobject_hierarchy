@@ -2,13 +2,21 @@
 
 bool SGH_PongBehaviour::IsHitSlider()
 {
-	return this->slider->GetLocalBounds().intersects(this->pongBall->GetLocalBounds());
+	bool intersect = this->slider->GetLocalBounds().intersects(this->pongBall->GetLocalBounds());
+
+	if (intersect)
+	{
+		std::cout << "intersect" << std::endl;;
+		
+	}
+
+	return intersect;
 }
 
 void SGH_PongBehaviour::Bounce(sf::RenderWindow& _w)
 {
 	pongBall->SetMoveVector(sf::Vector2f(-pongBall->GetMoveVector().x, pongBall->GetMoveVector().y));
-	pongBall->SetPosition(pongBall->GetPosition() + GetMoveVector());
+	pongBall->SetPosition(pongBall->GetPosition() + pongBall->GetMoveVector());
 }
 
 void SGH_PongBehaviour::TriggerBehaviour(sf::RenderWindow& _w)

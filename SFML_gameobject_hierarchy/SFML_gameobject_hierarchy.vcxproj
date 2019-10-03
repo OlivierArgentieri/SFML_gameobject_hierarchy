@@ -136,6 +136,9 @@
     <ClCompile Include="SGH_Behaviour.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGH_BouncyBehaviour.cpp" />
+    <ClCompile Include="SGH_InputManager.cpp" />
+    <ClCompile Include="SGH_Player.cpp" />
+    <ClCompile Include="SGH_PlayerManager.cpp" />
     <ClCompile Include="SGH_PongBehaviour.cpp" />
     <ClCompile Include="SGH_Circle.cpp" />
     <ClCompile Include="SGH_DestroyBehaviour.cpp" />
@@ -146,10 +149,15 @@
     <ClCompile Include="SGH_Runtime.cpp" />
     <ClCompile Include="SGH_Slider.cpp" />
     <ClCompile Include="SGH_MoveBehaviour.cpp" />
+    <ClCompile Include="SGH_ControllableGameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SGH_ControllableGameObject.h" />
+    <ClInclude Include="SGH_InputManager.h" />
+    <ClInclude Include="SGH_Player.h" />
     <ClInclude Include="SGH_Behaviour.h" />
     <ClInclude Include="SGH_BouncyBehaviour.h" />
+    <ClInclude Include="SGH_PlayerManager.h" />
     <ClInclude Include="SGH_PongBehaviour.h" />
     <ClInclude Include="SGH_Circle.h" />
     <ClInclude Include="SGH_DestroyBehaviour.h" />

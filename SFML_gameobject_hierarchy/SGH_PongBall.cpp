@@ -47,6 +47,11 @@ sf::Vector2f SGH_PongBall::GetMoveVector()
 	return bouncy_behaviour->GetMoveVector();
 }
 
+float SGH_PongBall::GetSize()
+{
+	return shape->getRadius();
+}
+
 SGH_PongBall::~SGH_PongBall()
 {
 	delete shape;
