@@ -1,5 +1,7 @@
 #include "SGH_PlayerManager.h"
 
+
+
 SGH_PlayerManager::~SGH_PlayerManager()
 {
 	ClearPlayers();

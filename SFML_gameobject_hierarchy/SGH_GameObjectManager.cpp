@@ -1,11 +1,26 @@
 #include "SGH_GameObjectManager.h"
 
+SGH_GameObjectManager* SGH_GameObjectManager::instance;
+
+
 void SGH_GameObjectManager::Clear()
 {
 	for (int i = gameObjects.size() - 1; i >= 0; --i)
 	{
 		delete gameObjects[i];
 	}
+}
+
+SGH_GameObjectManager::SGH_GameObjectManager()
+{
+	
+}
+
+SGH_GameObjectManager* SGH_GameObjectManager::GetInstance()
+{
+	if (!instance)
+		instance = new SGH_GameObjectManager();
+	return instance;
 }
 
 SGH_GameObjectManager::~SGH_GameObjectManager()

@@ -15,9 +15,8 @@ protected:
 	sf::Transformable* transform;
 	std::vector<SGH_Behaviour*> behaviours;
 	
-	
 	void ClearBehaviours();
-	
+
 public:
 	SGH_GameObject();
 	~SGH_GameObject();

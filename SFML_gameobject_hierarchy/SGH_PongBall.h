@@ -8,8 +8,6 @@ private:
 	
 	sf::CircleShape* shape;
 	SGH_BouncyBehaviour* bouncy_behaviour;
-	void ResetBall(sf::RenderWindow& _w);
-	bool HitLeftWindow();
 public:
 	SGH_PongBall(float size);
 	sf::FloatRect GetLocalBounds();

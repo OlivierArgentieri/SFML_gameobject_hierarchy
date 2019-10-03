@@ -6,6 +6,8 @@
 #include "SGH_PongBall.h"
 #include "SGH_Player.h"
 #include "SGH_InputManager.h"
+#include "SGH_GameManager.h"
+
 
 void SGH_Runtime::Run(sf::RenderWindow& _w)
 {
@@ -27,19 +29,17 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 
 SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf::Style::Close)
 {
-	gameManager = new SGH_GameObjectManager();
+	
 	playerManager = new SGH_PlayerManager();
 	SGH_Slider* slider = new SGH_Slider(10,100);
 	slider->CenterPivot();
 	slider->SetPosition(20, renderWindow.getSize().y / 2);
-	gameManager->AddGameObject(slider);
+	SGH_GameObjectManager::GetInstance()->AddGameObject(slider);
 
-
-	SGH_Slider* slider2 = new SGH_Slider(10, 500);
+	SGH_Slider* slider2 = new SGH_Slider(10, 100);
 	slider2->CenterPivot();
 	slider2->SetPosition(1260, renderWindow.getSize().y / 2);
-	gameManager->AddGameObject(slider2);
-	
+	SGH_GameObjectManager::GetInstance()->AddGameObject(slider2);
 
 	auto ball = new SGH_PongBall(10.0f);
 	ball->SetPosition(10, 10);
@@ -47,10 +47,9 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 
 	slider->AddPongBalls(ball);
 	slider2->AddPongBalls(ball);
-	gameManager->AddGameObject(ball);
+	SGH_GameObjectManager::GetInstance()->AddGameObject(ball);
 
 
-	
 	SGH_Player* player = new SGH_Player(slider);
 	player->SetUpKey(SGH_InputManager::GetInputUpPlayerOne());
 	player->SetDownKey(SGH_InputManager::GetInputDownPlayerOne());
@@ -61,20 +60,25 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	player2->SetDownKey(SGH_InputManager::GetInputDownPlayerTwo());
 	playerManager->AddPlayer(player2);
 
+
+	SGH_GameManager::GetInstance()->AddPlayer(player);
+	SGH_GameManager::GetInstance()->AddPlayer(player2);
+	SGH_GameManager::GetInstance()->AddPongBall(ball);
+	SGH_GameManager::GetInstance()->AddSlider(slider);
+	SGH_GameManager::GetInstance()->AddSlider(slider2);
 	Run(renderWindow);
 }
 
 SGH_Runtime::~SGH_Runtime()
 {
-	delete gameManager;
 	delete playerManager;
 }
 
 void SGH_Runtime::Render(sf::RenderWindow& _w)
 {
 	_w.clear();
-	gameManager->UpdateAll(_w);
-	
+	SGH_GameObjectManager::GetInstance()->UpdateAll(_w);
+	SGH_GameManager::GetInstance()->GameOver(_w);
 	_w.display();
 }
 
@@ -88,10 +92,9 @@ void SGH_Runtime::Event(sf::RenderWindow& _w)
 		bool pause = _events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::P;
 
 		if (pause)
-			gameManager->SetPauseAll();
+			SGH_GameObjectManager::GetInstance()->SetPauseAll();
 		if (exit)
 			_w.close();
-		gameManager->CatchAllEvents(_w, _events);
 		playerManager->TriggerAllPlayer(_events, _w);
 	}
 }
