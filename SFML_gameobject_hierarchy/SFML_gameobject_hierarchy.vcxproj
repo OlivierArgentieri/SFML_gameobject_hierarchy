@@ -151,6 +151,8 @@
     <ClCompile Include="SGH_Slider.cpp" />
     <ClCompile Include="SGH_MoveBehaviour.cpp" />
     <ClCompile Include="SGH_ControllableGameObject.cpp" />
+    <ClCompile Include="SGH_Text.cpp" />
+    <ClCompile Include="SGH_TextManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGH_ControllableGameObject.h" />
@@ -170,6 +172,7 @@
     <ClInclude Include="SGH_Rect.h" />
     <ClInclude Include="SGH_Runtime.h" />
     <ClInclude Include="SGH_Slider.h" />
+    <ClInclude Include="SGH_Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
