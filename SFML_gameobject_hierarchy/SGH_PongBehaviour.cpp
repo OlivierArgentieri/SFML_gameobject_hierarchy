@@ -4,12 +4,6 @@ bool SGH_PongBehaviour::IsHitSlider()
 {
 	bool intersect = this->slider->GetLocalBounds().intersects(this->pongBall->GetLocalBounds());
 
-	if (intersect)
-	{
-		std::cout << "intersect" << std::endl;;
-		
-	}
-
 	return intersect;
 }
 

@@ -24,8 +24,11 @@ SGH_Slider::~SGH_Slider()
 
 void SGH_Slider::Update(sf::RenderWindow& _w)
 {
-	ApplyBehaviour(_w);
 	_w.draw(*shape);
+
+	if (IsPause()) return;
+	
+		ApplyBehaviour(_w);
 }
 
 void SGH_Slider::SetPosition(sf::Vector2f _pos)
@@ -72,12 +75,17 @@ void SGH_Slider::AddPongBalls(SGH_PongBall* _pongBall)
 
 bool SGH_Slider::CanMoveUp(sf::RenderWindow& _w)
 {
+	if (IsPause())
+		return false;
 	return !HitTop(_w);
 }
 
 bool SGH_Slider::CanMoveDown(sf::RenderWindow& _w)
 {
-	return !HitBottom(_w);
+
+	if (IsPause())
+		return false;
+	return !HitBottom(_w) ;
 }
 
 void SGH_Slider::MoveUp()

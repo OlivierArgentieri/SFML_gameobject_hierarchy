@@ -38,3 +38,11 @@ void SGH_GameObjectManager::CatchAllEvents(sf::RenderWindow& _w, sf::Event _even
 		this->gameObjects[i]->CatchEvent(_w, _events);
 	}
 }
+
+void SGH_GameObjectManager::SetPauseAll()
+{
+	for (int i = 0; i < this->gameObjects.size(); ++i)
+	{
+		this->gameObjects[i]->SetPause();
+	}
+}

@@ -9,11 +9,13 @@ class SGH_Behaviour;
 class SGH_GameObject
 {
 private:
-	
+	bool isPause;
+
 protected:
 	sf::Transformable* transform;
 	std::vector<SGH_Behaviour*> behaviours;
-
+	
+	
 	void ClearBehaviours();
 	
 public:
@@ -39,4 +41,9 @@ public:
 	void SetOrigin(sf::Vector2f _newOrigin);
 
 	virtual void CenterPivot();
+
+	bool IsPause();
+
+	void SetPause();
+	void SetPause(bool _pause);
 };

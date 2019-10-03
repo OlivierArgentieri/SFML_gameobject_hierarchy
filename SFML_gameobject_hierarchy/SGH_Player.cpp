@@ -65,7 +65,7 @@ void SGH_Player::MoveUpGameObject(sf::Event _event, sf::RenderWindow& _w)
 void SGH_Player::MoveDownGameObject(sf::Event _event, sf::RenderWindow& _w)
 {
 	if (_event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(GetDownKey()))
-	{
+{
 		GetControllableGameObject()->TryMoveDown(_w);
 	}
 }

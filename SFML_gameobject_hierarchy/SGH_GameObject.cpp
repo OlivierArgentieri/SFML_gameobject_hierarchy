@@ -2,6 +2,21 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "SGH_Behaviour.h"
 
+bool SGH_GameObject::IsPause()
+{
+	return isPause;
+}
+
+void SGH_GameObject::SetPause()
+{
+	isPause = !isPause;
+}
+
+void SGH_GameObject::SetPause(bool _pause)
+{
+	isPause = _pause;
+}
+
 void SGH_GameObject::ClearBehaviours()
 {
 	for (unsigned int i = 0; i < behaviours.size(); ++i)
@@ -12,6 +27,7 @@ void SGH_GameObject::ClearBehaviours()
 
 SGH_GameObject::SGH_GameObject()
 {
+	isPause = false;
 	transform = nullptr;
 }
 
@@ -21,7 +37,7 @@ SGH_GameObject::~SGH_GameObject()
 	ClearBehaviours();
 }
 
-SGH_GameObject::SGH_GameObject(sf::Transformable* _tranformable)
+SGH_GameObject::SGH_GameObject(sf::Transformable* _tranformable) : SGH_GameObject()
 {
 	transform = _tranformable;
 }

@@ -85,6 +85,10 @@ void SGH_Runtime::Event(sf::RenderWindow& _w)
 	while (_w.pollEvent(_events))
 	{
 		bool exit = _events.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);
+		bool pause = _events.type == sf::Event::KeyPressed && _events.key.code == sf::Keyboard::P;
+
+		if (pause)
+			gameManager->SetPauseAll();
 		if (exit)
 			_w.close();
 		gameManager->CatchAllEvents(_w, _events);
