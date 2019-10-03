@@ -136,6 +136,7 @@
     <ClCompile Include="SGH_Behaviour.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGH_BouncyBehaviour.cpp" />
+    <ClCompile Include="SGH_PongBehaviour.cpp" />
     <ClCompile Include="SGH_Circle.cpp" />
     <ClCompile Include="SGH_DestroyBehaviour.cpp" />
     <ClCompile Include="SGH_GameObject.cpp" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="SGH_Behaviour.h" />
     <ClInclude Include="SGH_BouncyBehaviour.h" />
+    <ClInclude Include="SGH_PongBehaviour.h" />
     <ClInclude Include="SGH_Circle.h" />
     <ClInclude Include="SGH_DestroyBehaviour.h" />
     <ClInclude Include="SGH_GameObject.h" />

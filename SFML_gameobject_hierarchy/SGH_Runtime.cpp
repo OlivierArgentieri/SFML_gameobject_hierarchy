@@ -9,8 +9,10 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 {
 	sf::Clock _clock;
 	sf::Time _deltaTime = sf::Time::Zero;
+	
 	while (_w.isOpen())
 	{
+		Event(_w);
 		_deltaTime += _clock.restart();
 		while (_deltaTime > frameRate)
 		{
@@ -32,6 +34,8 @@ SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf
 	auto ball = new SGH_PongBall(10.0f);
 	ball->SetPosition(10, 10);
 	ball->CenterPivot();
+
+	slider->AddPongBalls(ball);
 	
 	gameManager->AddGameObject(ball);
 	Run(renderWindow);

@@ -1,7 +1,14 @@
 #include "SGH_GameObject.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "SGH_Behaviour.h"
-#include "SGH_BouncyBehaviour.h"
+
+void SGH_GameObject::ClearBehaviours()
+{
+	for (unsigned int i = 0; i < behaviours.size(); ++i)
+	{
+		delete behaviours[i];
+	}
+}
 
 SGH_GameObject::SGH_GameObject()
 {
@@ -11,6 +18,7 @@ SGH_GameObject::SGH_GameObject()
 SGH_GameObject::~SGH_GameObject()
 {
 	delete transform;
+	ClearBehaviours();
 }
 
 SGH_GameObject::SGH_GameObject(sf::Transformable* _tranformable)
