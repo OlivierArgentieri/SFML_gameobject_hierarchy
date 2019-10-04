@@ -30,7 +30,7 @@ void SGH_Runtime::Run(sf::RenderWindow& _w)
 SGH_Runtime::SGH_Runtime() : renderWindow(sf::VideoMode(1280, 720), "window", sf::Style::Close)
 {
 
-	SGH_GameManager::GetInstance()->Bric(renderWindow);
+	//SGH_GameManager::GetInstance()->Bric(renderWindow);
 	
 	Run(renderWindow);
 }
@@ -43,6 +43,7 @@ void SGH_Runtime::Render(sf::RenderWindow& _w)
 {
 	_w.clear();
 	SGH_GameObjectManager::GetInstance()->UpdateAll(_w);
+	SGH_GameManager::GetInstance()->Update(_w);
 	SGH_GameManager::GetInstance()->GameOver(_w);
 	_w.display();
 }

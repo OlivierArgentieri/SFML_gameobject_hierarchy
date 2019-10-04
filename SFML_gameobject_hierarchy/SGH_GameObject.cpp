@@ -47,6 +47,12 @@ sf::Vector2f SGH_GameObject::GetVector2fSize()
 	return sf::Vector2f();
 }
 
+void SGH_GameObject::SetColor(sf::Color _color)
+{
+	
+}
+
+
 void SGH_GameObject::ClearBehaviours()
 {
 	for (unsigned int i = 0; i < behaviours.size(); ++i)
@@ -94,9 +100,9 @@ sf::Vector2f SGH_GameObject::GetPosition()
 	return transform->getPosition();
 }
 
-void SGH_GameObject::SetPosition(float _width, float _height)
+void SGH_GameObject::SetPosition(float _x, float _y)
 {
-	SetPosition(sf::Vector2f(_width, _height));
+	SetPosition(sf::Vector2f(_x, _y));
 }
 
 void SGH_GameObject::SetPosition(sf::Vector2f _newPosition)

@@ -3,15 +3,18 @@
 #include "SGH_InputManager.h"
 #include "SGH_PlayerManager.h"
 #include "SGH_Bric.h"
+#include "SGH_Menu.h"
 
 SGH_GameManager* SGH_GameManager::instance;
 
 SGH_GameManager::SGH_GameManager()
 {
+	menu = new SGH_Menu();
 }
 
 void SGH_GameManager::PongOnePlayer(sf::RenderWindow& _w)
 {
+	isGameselected = true;
 	SGH_Slider* slider = new SGH_Slider(10, 100);
 	slider->CenterPivot();
 	slider->SetPosition(20, _w.getSize().y / 2);
@@ -36,6 +39,7 @@ void SGH_GameManager::PongOnePlayer(sf::RenderWindow& _w)
 
 void SGH_GameManager::PongTwoPlayer(sf::RenderWindow& _w)
 {
+	isGameselected = true;
 	SGH_Slider* slider = new SGH_Slider(10, 100);
 	slider->CenterPivot();
 	slider->SetPosition(20, _w.getSize().y / 2);
@@ -72,7 +76,7 @@ void SGH_GameManager::PongTwoPlayer(sf::RenderWindow& _w)
 
 void SGH_GameManager::Bric(sf::RenderWindow& _w)
 {
-	
+	isGameselected = true;
 	SGH_Slider* slider = new SGH_Slider(10, 100);
 	slider->CenterPivot();
 	slider->SetPosition(20, _w.getSize().y / 2);
@@ -90,7 +94,7 @@ void SGH_GameManager::Bric(sf::RenderWindow& _w)
 	
 	SGH_Bric* bric = new SGH_Bric(50, 100, ball);
 	bric->CenterPivot();
-	bric->SetPosition(sf::Vector2f(1280 / 2, 720 / 2));
+	bric->SetPosition(sf::Vector2f(_w.getSize().x/ 2, _w.getSize().y/ 2));
 	SGH_GameObjectManager::GetInstance()->AddGameObject(bric);
 
 	slider->AddPongBalls(ball);
@@ -98,6 +102,13 @@ void SGH_GameManager::Bric(sf::RenderWindow& _w)
 	SGH_GameManager::GetInstance()->AddPongBall(ball);
 	SGH_GameManager::GetInstance()->AddPlayer(player);
 
+}
+
+
+void SGH_GameManager::Update(sf::RenderWindow& _w)
+{
+	if(!isGameselected)
+	menu->Update(_w);
 }
 
 SGH_GameManager* SGH_GameManager::GetInstance()

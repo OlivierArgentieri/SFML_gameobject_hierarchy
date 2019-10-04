@@ -27,7 +27,7 @@ public:
 	virtual void CatchEvent(sf::RenderWindow& _w, sf::Event _events);
 
 	virtual sf::Vector2f GetPosition();
-	virtual void SetPosition(float _width, float _height);
+	virtual void SetPosition(float _x, float _y);
 	virtual void SetPosition(sf::Vector2f _newPosition);
 
 	float GetRotation();
@@ -54,5 +54,6 @@ public:
 
 	virtual float GetFloatSize();
 	virtual sf::Vector2f GetVector2fSize();
+	virtual void SetColor(sf::Color _color);
 };
 

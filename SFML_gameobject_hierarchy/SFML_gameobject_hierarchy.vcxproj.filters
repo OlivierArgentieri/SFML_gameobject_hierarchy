@@ -103,17 +103,20 @@
     <ClCompile Include="SGH_GameManager.cpp">
       <Filter>Source Files\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="SGH_TextManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SGH_Text.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SGH_Bric.cpp">
       <Filter>Source Files\Forms</Filter>
     </ClCompile>
     <ClCompile Include="SGH_BricBehaviour.cpp">
       <Filter>Source Files\Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_Text.cpp">
+      <Filter>Source Files\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="SGH_Button.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -165,12 +168,6 @@
     <ClInclude Include="SGH_GameManager.h">
       <Filter>Header Files\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="SGH_TextManager.h">
-      <Filter>Header Files\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="SGH_Text.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SGH_GameObject.h">
       <Filter>Header Files\GameObject</Filter>
     </ClInclude>
@@ -180,5 +177,22 @@
     <ClInclude Include="SGH_BricBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SGH_Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Text.h">
+      <Filter>Header Files\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="SGH_Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SFML_gameobject_hierarchy.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

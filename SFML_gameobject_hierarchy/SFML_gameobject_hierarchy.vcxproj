@@ -138,8 +138,10 @@
     <ClCompile Include="SGH_BouncyBehaviour.cpp" />
     <ClCompile Include="SGH_Bric.cpp" />
     <ClCompile Include="SGH_BricBehaviour.cpp" />
+    <ClCompile Include="SGH_Button.cpp" />
     <ClCompile Include="SGH_GameManager.cpp" />
     <ClCompile Include="SGH_InputManager.cpp" />
+    <ClCompile Include="SGH_Menu.cpp" />
     <ClCompile Include="SGH_Player.cpp" />
     <ClCompile Include="SGH_PlayerManager.cpp" />
     <ClCompile Include="SGH_PongBehaviour.cpp" />
@@ -154,14 +156,16 @@
     <ClCompile Include="SGH_MoveBehaviour.cpp" />
     <ClCompile Include="SGH_ControllableGameObject.cpp" />
     <ClCompile Include="SGH_Text.cpp" />
-    <ClCompile Include="SGH_TextManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SGH_Bric.h" />
     <ClInclude Include="SGH_BricBehaviour.h" />
+    <ClInclude Include="SGH_Button.h" />
     <ClInclude Include="SGH_ControllableGameObject.h" />
     <ClInclude Include="SGH_GameManager.h" />
     <ClInclude Include="SGH_InputManager.h" />
+    <ClInclude Include="SGH_Menu.h" />
     <ClInclude Include="SGH_Player.h" />
     <ClInclude Include="SGH_Behaviour.h" />
     <ClInclude Include="SGH_BouncyBehaviour.h" />
@@ -177,7 +181,9 @@
     <ClInclude Include="SGH_Runtime.h" />
     <ClInclude Include="SGH_Slider.h" />
     <ClInclude Include="SGH_Text.h" />
-    <ClInclude Include="SGH_TextManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SFML_gameobject_hierarchy.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

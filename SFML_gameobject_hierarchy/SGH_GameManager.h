@@ -2,6 +2,8 @@
 #include "SGH_Player.h"
 #include "SGH_Slider.h"
 
+class SGH_Menu;
+
 class SGH_GameManager
 {
 private:
@@ -13,6 +15,9 @@ private:
 	std::vector<SGH_PongBall*> pong_balls;
 
 	std::map<SGH_Player*, int> scores;
+
+	SGH_Menu* menu;
+	bool isGameselected = false;
 	SGH_GameManager();
 
 public:
@@ -31,4 +36,7 @@ public:
 	void PongOnePlayer(sf::RenderWindow& _w);
 	void PongTwoPlayer(sf::RenderWindow& _w);
 	void Bric(sf::RenderWindow& _w);
+
+
+	void Update(sf::RenderWindow& _w);
 };
