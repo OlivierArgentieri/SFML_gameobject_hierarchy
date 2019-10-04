@@ -42,7 +42,17 @@ sf::Vector2f SGH_PongBall::GetMoveVector()
 	return bouncy_behaviour->GetMoveVector();
 }
 
+sf::Rect<float> SGH_PongBall::GetFloatRect()
+{
+	return shape->getGlobalBounds();
+}
+
 float SGH_PongBall::GetSize()
+{
+	return shape->getRadius();
+}
+
+float SGH_PongBall::GetFloatSize()
 {
 	return shape->getRadius();
 }

@@ -10,7 +10,7 @@ class SGH_GameObject
 {
 private:
 	bool isPause;
-
+	bool isVisible = true;
 protected:
 	sf::Transformable* transform;
 	std::vector<SGH_Behaviour*> behaviours;
@@ -45,4 +45,14 @@ public:
 
 	void SetPause();
 	void SetPause(bool _pause);
+	
+	virtual void SetVisibility(bool _visibility);
+	bool IsVisible();
+
+	virtual sf::Rect<int> GetIntRect();
+	virtual sf::Rect<float> GetFloatRect();
+
+	virtual float GetFloatSize();
+	virtual sf::Vector2f GetVector2fSize();
 };
+

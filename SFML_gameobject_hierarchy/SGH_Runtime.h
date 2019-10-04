@@ -8,7 +8,8 @@ class SGH_GameManager;
 class SGH_Runtime
 {
 private :
-	SGH_PlayerManager* playerManager;
+	
+	
 	sf::RenderWindow renderWindow;
 	sf::Time frameRate = sf::seconds(1 / 60.0f);
 

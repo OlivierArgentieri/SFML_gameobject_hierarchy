@@ -15,6 +15,10 @@ public:
 	void CenterPivot() override;
 	void SetMoveVector(sf::Vector2f _moveVector);
 	sf::Vector2f GetMoveVector();
+	
+	sf::Rect<float> GetFloatRect() override;
+	
 	float GetSize();
+	float GetFloatSize() override;
 	~SGH_PongBall();
 };

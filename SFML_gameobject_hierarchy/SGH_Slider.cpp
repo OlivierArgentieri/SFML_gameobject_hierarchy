@@ -97,11 +97,3 @@ void SGH_Slider::MoveDown()
 {
 	SetPosition(GetPosition() + sf::Vector2f(0, 10));
 }
-
-void SGH_Slider::CatchEvent(sf::RenderWindow& _w, sf::Event _events)
-{
-	// if(player->PressUp());
-	// 
-	// if(player->PressDown());
-	//todo
-}

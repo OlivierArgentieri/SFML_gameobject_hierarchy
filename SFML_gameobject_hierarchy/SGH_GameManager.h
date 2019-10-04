@@ -6,12 +6,15 @@ class SGH_GameManager
 {
 private:
 	static SGH_GameManager* instance;
-	std::vector<SGH_Player*> players;
+	SGH_Player* playerOne;
+	SGH_Player* playerTwo;
+	
 	std::vector<SGH_Slider*> sliders;
 	std::vector<SGH_PongBall*> pong_balls;
 
 	std::map<SGH_Player*, int> scores;
 	SGH_GameManager();
+
 public:
 	
 	static SGH_GameManager* GetInstance();
@@ -24,4 +27,8 @@ public:
 	bool HitRightWindow(sf::RenderWindow& _w);
 	void UpdateScorePlayer(SGH_Player* _player);
 	void ResetBalls(sf::RenderWindow& _w);
+
+	void PongOnePlayer(sf::RenderWindow& _w);
+	void PongTwoPlayer(sf::RenderWindow& _w);
+	void Bric(sf::RenderWindow& _w);
 };

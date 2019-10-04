@@ -17,6 +17,36 @@ void SGH_GameObject::SetPause(bool _pause)
 	isPause = _pause;
 }
 
+void SGH_GameObject::SetVisibility(bool _visibility)
+{
+	isVisible = _visibility;
+}
+
+bool SGH_GameObject::IsVisible()
+{
+	return isVisible;
+}
+
+sf::Rect<int> SGH_GameObject::GetIntRect()
+{
+	return sf::IntRect();
+}
+
+sf::Rect<float> SGH_GameObject::GetFloatRect()
+{
+	return sf::FloatRect();
+}
+
+float SGH_GameObject::GetFloatSize()
+{
+	return 0;
+}
+
+sf::Vector2f SGH_GameObject::GetVector2fSize()
+{
+	return sf::Vector2f();
+}
+
 void SGH_GameObject::ClearBehaviours()
 {
 	for (unsigned int i = 0; i < behaviours.size(); ++i)

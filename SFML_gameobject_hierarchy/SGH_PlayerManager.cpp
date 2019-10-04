@@ -1,6 +1,16 @@
 #include "SGH_PlayerManager.h"
+SGH_PlayerManager* SGH_PlayerManager::instance;
 
+SGH_PlayerManager::SGH_PlayerManager()
+{
+}
 
+SGH_PlayerManager* SGH_PlayerManager::GetInstance()
+{
+	if (!instance)
+		instance = new SGH_PlayerManager();
+	return instance;
+}
 
 SGH_PlayerManager::~SGH_PlayerManager()
 {
