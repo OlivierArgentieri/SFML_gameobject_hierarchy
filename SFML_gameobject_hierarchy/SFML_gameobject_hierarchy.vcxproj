@@ -173,6 +173,7 @@
     <ClInclude Include="SGH_Runtime.h" />
     <ClInclude Include="SGH_Slider.h" />
     <ClInclude Include="SGH_Text.h" />
+    <ClInclude Include="SGH_TextManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

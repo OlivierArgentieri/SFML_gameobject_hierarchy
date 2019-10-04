@@ -1,6 +1,5 @@
 #include "SGH_Runtime.h"
 #include "SGH_Rect.h"
-#include "SGH_Circle.h"
 #include "SGH_Slider.h"
 #include <iostream>
 #include "SGH_PongBall.h"

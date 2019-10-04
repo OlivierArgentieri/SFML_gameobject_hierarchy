@@ -8,8 +8,7 @@ private:
 	sf::Text text;
 
 public:
-	SGH_Text()
-	{
-	}
+	SGH_Text();
+	
 };
 
