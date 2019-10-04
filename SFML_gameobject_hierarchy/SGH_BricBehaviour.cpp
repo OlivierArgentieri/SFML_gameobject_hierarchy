@@ -26,46 +26,17 @@ SGH_PongBall* SGH_BricBehaviour::GetBall()
 
 void SGH_BricBehaviour::TriggerBehaviour(sf::RenderWindow& _w)
 {
-	if (HitLeftBric() || HitRightBric())
-		SGH_BounceLeftRight();
+	if (HitBric())
+		SGH_Bounce();
 
-	if (HitTopBric() || HitBotBric())
-		SGH_BounceTopBot();
 }
 
-bool SGH_BricBehaviour::HitLeftBric()
+bool SGH_BricBehaviour::HitBric()
 {
-	//return GetBall()->GetFloatRect().left ==  GetBric()->GetFloatRect().left ;
-	return false;
-}
-bool SGH_BricBehaviour::HitRightBric()
-{
-	//return GetBall()->GetFloatRect().width == GetBric()->GetFloatRect().width;
-	return false;
-}
-
-bool SGH_BricBehaviour::HitTopBric()
-{
-	float 
-	float x_ball_min = GetBall()->GetPosition().x + GetBall()->GetOrigin().x * GetBall()->GetScale().x;
-	float y_ball = GetBall()->GetPosition().y + GetBall()->GetOrigin().y * GetBall()->GetScale().y;
-
 	
-	bool test_x = GetBall()->GetPosition().x + GetBall()->GetFloatSize() > GetBric()->GetPosition().x + GetBric()->GetOrigin().x * GetBric()->GetScale();
-	return GetBall()->GetFloatRect().top == GetBric()->GetFloatRect().top
+	return GetBall()->GetFloatRect().intersects(GetBric()->GetFloatRect());
 }
-bool SGH_BricBehaviour::HitBotBric()
+void SGH_BricBehaviour::SGH_Bounce()
 {
-	return false;
-
-};
-
-void SGH_BricBehaviour::SGH_BounceLeftRight()
-{
-	GetBall()->SetMoveVector(sf::Vector2f(-GetBall()->GetMoveVector().x, GetBall()->GetMoveVector().y));
-}
-
-void SGH_BricBehaviour::SGH_BounceTopBot()
-{
-	GetBall()->SetMoveVector(sf::Vector2f(GetBall()->GetMoveVector().x, -GetBall()->GetMoveVector().y));
+	GetBall()->SetMoveVector(sf::Vector2f(-GetBall()->GetMoveVector().x, -GetBall()->GetMoveVector().y));
 }
