@@ -10,26 +10,6 @@ SGH_Menu::SGH_Menu()
 	title->SetPosition(1280/ 2, 20);
 	title->SetSize(24);
 	
-	text_game_1 = new SGH_Text("PIXEAB__.ttf");
-	text_game_1->SetString("Pong 1J");
-	text_game_1->CenterPivot();
-	text_game_1->SetPosition(1280 / 2, 100);
-	text_game_1->SetSize(20);
-
-
-	text_game_2= new SGH_Text("PIXEAB__.ttf");
-	text_game_2->SetString("Pong 2J");
-	text_game_2->CenterPivot();
-	text_game_2->SetPosition(1280 / 2, 150);
-	text_game_2->SetSize(20);
-	
-
-	text_game_3 = new SGH_Text("PIXEAB__.ttf");
-	text_game_3->SetString("Bric");
-	text_game_3->CenterPivot();
-	text_game_3->SetPosition(1280 / 2, 200);
-	text_game_3->SetSize(20);
-
 	testButton = new SGH_Button("PIXEAB__.ttf", sf::Vector2f(10,10));
 
 	buttonGame1 = new SGH_Button("PIXEAB__.ttf", sf::Vector2f(200, 30));
@@ -37,13 +17,10 @@ SGH_Menu::SGH_Menu()
 	buttonGame1->SetString("Pong 1J");
 	buttonGame1->SetColor(sf::Color::Blue);
 
-
 	buttonGame2 = new SGH_Button("PIXEAB__.ttf", sf::Vector2f(200, 30));
 	buttonGame2->SetPosition(1280 / 2, 150);
 	buttonGame2->SetString("Pong 2J");
 	buttonGame2->SetColor(sf::Color::Blue);
-
-
 
 	buttonGame3 = new SGH_Button("PIXEAB__.ttf", sf::Vector2f(200, 30));
 	buttonGame3->SetPosition(1280 / 2, 200);
@@ -55,9 +32,9 @@ SGH_Menu::~SGH_Menu()
 {
 	delete title;
 	
-	delete text_game_1;
-	delete text_game_2;
-	delete text_game_3;
+	delete buttonGame1;
+	delete buttonGame2;
+	delete buttonGame3;
 }
 
 void SGH_Menu::Update(sf::RenderWindow& _w)

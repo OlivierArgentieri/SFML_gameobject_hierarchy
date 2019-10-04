@@ -26,7 +26,6 @@ void SGH_Button::Update(sf::RenderWindow& _w)
 
 }
 
-
 bool SGH_Button::Clicked(sf::RenderWindow& _w)
 {
 	return shape->getGlobalBounds().contains(_w.mapPixelToCoords(sf::Mouse::getPosition(_w))) && sf::Mouse::isButtonPressed(sf::Mouse::Left);
